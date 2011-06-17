@@ -19,3 +19,4 @@ Credits
 =======
 Based on the tutorial http://www.switchonthecode.com/tutorials/jquery-creating-a-slideshow
 I fixed a bug in the tutorial and wrapped the code in to a javascript class.
+

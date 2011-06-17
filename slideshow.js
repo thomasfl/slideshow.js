@@ -1,4 +1,5 @@
-/* Simple slideshow class based on http://www.switchonthecode.com/tutorials/jquery-creating-a-slideshow */
+/* Simple slideshow to scroll content of divs sideways
+* class based on http://www.switchonthecode.com/tutorials/jquery-creating-a-slideshow */
 window.Slideshow = (function (holderId, scrollerId, contentClass) {
 
     var s = {};
