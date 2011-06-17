@@ -31,8 +31,11 @@ The javascript API is simple, the hard thing is to get the CSS right.
 ```
 
 Include 'slideshow.js' and initiate it with id's of the div's:
+
 ```javascript
   slideshow = new Slideshow('slideshow-holder','slideshow-scroller','slideshow-content');
+  $("#next_link".click(function(){slideshow.showNextSlide();});
+  $("#prev_link".click(function(){slideshow.showPreviousSlide();});
 ```
 Use slideshow.showPreviousSlide() or slideshow.showNextSlide() to switch between slides.
 
