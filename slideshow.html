@@ -1,11 +1,10 @@
 <html>
-<body style="background-color: #a0a0a0">
+<head><title>Slideshow.js</title></head>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 
-<a href="http://www.switchonthecode.com/tutorials/jquery-creating-a-slideshow">Tutorial</a>
-<br>
-
 <style>
+
 #slideshow-area, #slideshow-scroller {
   width: 200px;
   height: 300px;
@@ -31,31 +30,46 @@
   margin: 0;
   border: none;
 }
+
+/* Add a minimum of esthetics */
+
+body {
+  background-color: #a0a0a0;
+}
+
+h1 {
+  text-align: center;
+}
 </style>
 
-<br/>
+<body>
+
+<a href="https://github.com/thomasfl/slideshow.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/4c7dc970b89fd04b81c8e221ba88ff99a06c6b61/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub"></a>
+
+
+<h1>Slideshow.js</h1>
 
 <div id="slideshow-area">
   <div id="slideshow-scroller">
     <div id="slideshow-holder">
       <div class="slideshow-content">
-             1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+             <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-             enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-             <a href="#" onclick="slideshow.showNextSlide();">Neste</a>
+             enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+             <p><a href="#" onclick="slideshow.showNextSlide();">Next</a></p>
       </div>
       <div class="slideshow-content">
-             2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+             <p>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-             enim ad minim veniam, quis nostrud exercitation ullamco laboris
-             <a href="#" onclick="slideshow.showPreviousSlide();">Forrige</a>
-             <a href="#" onclick="slideshow.showNextSlide();">Neste</a>
+             enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+             <p><a href="#" onclick="slideshow.showPreviousSlide();">Previous</a>
+             <a href="#" onclick="slideshow.showNextSlide();">Next</a></p>
       </div>
       <div class="slideshow-content">
-             3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+             <p>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-             enim ad minim veniam, quis nostrud exercitation ullamco laboris
-             <a href="#" onclick="slideshow.showPreviousSlide();">Forrige</a>
+             enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+             <p><a href="#" onclick="slideshow.showPreviousSlide();">Previous</a></p>
       </div>
     </div>
   </div>
@@ -68,3 +82,4 @@
 </script>
 </body>
 </html>
+
