@@ -12,8 +12,11 @@ API
 ===
 The javascript API is simple, the hard thing is to get the CSS right.
 
-  <script src="slideshow.js" type="text/javascript"></script>
+Include 'slideshow.js' and initiate it:
+
   slideshow = new Slideshow('slideshow-holder','slideshow-scroller','slideshow-content');
+
+Use slideshow.showPreviousSlide() or slideshow.showNextSlide() to switch between slides.
 
 Credits
 =======
