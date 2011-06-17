@@ -1,0 +1,70 @@
+<html>
+<body style="background-color: #a0a0a0">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+<a href="http://www.switchonthecode.com/tutorials/jquery-creating-a-slideshow">Tutorial</a>
+<br>
+
+<style>
+#slideshow-area, #slideshow-scroller {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#slideshow-area {
+  border: 1px solid #000;
+}
+
+#slideshow-holder {
+  height: 500px;
+}
+
+.slideshow-content {
+  width: 180px;
+  height: 300px;
+  background-color: white;
+  float: left;
+  padding: 10px;
+  margin: 0;
+  border: none;
+}
+</style>
+
+<br/>
+
+<div id="slideshow-area">
+  <div id="slideshow-scroller">
+    <div id="slideshow-holder">
+      <div class="slideshow-content">
+             1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+             enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+             <a href="#" onclick="slideshow.showNextSlide();">Neste</a>
+      </div>
+      <div class="slideshow-content">
+             2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+             enim ad minim veniam, quis nostrud exercitation ullamco laboris
+             <a href="#" onclick="slideshow.showPreviousSlide();">Forrige</a>
+             <a href="#" onclick="slideshow.showNextSlide();">Neste</a>
+      </div>
+      <div class="slideshow-content">
+             3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+             enim ad minim veniam, quis nostrud exercitation ullamco laboris
+             <a href="#" onclick="slideshow.showPreviousSlide();">Forrige</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="slideshow.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  slideshow = new Slideshow('slideshow-holder','slideshow-scroller','slideshow-content');
+</script>
+</body>
+</html>
