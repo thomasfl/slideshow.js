@@ -35,6 +35,7 @@ window.Slideshow = (function (holderId, scrollerId, contentClass) {
         }
       });
       $("#" + s.scrollerId).animate({scrollLeft: scrollAmount}, 500);
+
     };
 
     return s;
