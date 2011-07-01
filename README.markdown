@@ -33,7 +33,10 @@ The javascript API is simple, the hard thing is to get the CSS right. Look at th
 Initiate it with the id's of the div's:
 
 ```javascript
-  slideshow = new Slideshow({holderId: 'slideshow-holder', scrollerId: 'slideshow-scroller', contentClass: 'slideshow-content'});
+  slideshow = new Slideshow({
+              holderId: 'slideshow-holder',
+              scrollerId: 'slideshow-scroller',
+              contentClass: 'slideshow-content'});
   $("#next_link".click(function(){slideshow.showNextSlide();});
   $("#prev_link".click(function(){slideshow.showPreviousSlide();});
 ```
@@ -42,14 +45,24 @@ Use slideshow.showPreviousSlide() or slideshow.showNextSlide() to switch between
 add the parameter 'duration':
 
 ```javascript
-  slideshow = new Slideshow({holderId: 'slideshow-holder', scrollerId: 'slideshow-scroller', contentClass: 'slideshow-content', duration: 1000});
+  slideshow = new Slideshow({
+              holderId: 'slideshow-holder',
+              scrollerId: 'slideshow-scroller',
+              contentClass: 'slideshow-content',
+              duration: 1000});
 ```
 
 A callback function will be triggered when animation is completed:
 
 ```javascript
-  slideshow = new Slideshow({holderId: 'slideshow-holder', scrollerId: 'slideshow-scroller', contentClass: 'slideshow-content'},
-                  function(){alert("Slide " + slideshow.currentSlide + " of " + slideshow.totalSlides );} );
+  slideshow = new Slideshow({
+                  holderId: 'slideshow-holder',
+                  scrollerId: 'slideshow-scroller',
+                  contentClass: 'slideshow-content'
+                },
+                function(){
+                  alert("Slide " + slideshow.currentSlide + " of " + slideshow.totalSlides );
+                });
 ```
 
 
