@@ -55,22 +55,26 @@ h1 {
   <div id="slideshow-scroller">
     <div id="slideshow-holder">
       <div class="slideshow-content">
-             <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-             enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+             <h3>Page 1 of 3</h3>
+             <p>
+               Click 'next' to slide in the next
+               box with content. </p>
              <p><a href="#" onclick="slideshow.showNextSlide();">Next</a></p>
       </div>
       <div class="slideshow-content">
-             <p>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-             enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+             <h3>Page 2 of 3</h3>
+             <p>
+               To add the slideshow to your page view the html source for this page
+               and read the documentation for the Slideshow class.
+             </p>
              <p><a href="#" onclick="slideshow.showPreviousSlide();">Previous</a>
              <a href="#" onclick="slideshow.showNextSlide();">Next</a></p>
       </div>
       <div class="slideshow-content">
-             <p>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-             enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+             <h3>Page 3 of 3</h3>
+             <p>
+               The animation effect is done with the jquery animate method.
+             </p>
              <p><a href="#" onclick="slideshow.showPreviousSlide();">Previous</a></p>
       </div>
     </div>
@@ -80,7 +84,8 @@ h1 {
 
 <script src="slideshow.js" type="text/javascript" charset="utf-8"></script>
 <script>
-  slideshow = new Slideshow('slideshow-holder','slideshow-scroller','slideshow-content');
+  slideshow = new Slideshow({holderId: 'slideshow-holder', scrollerId: 'slideshow-scroller', contentClass: 'slideshow-content'},
+                  function(){alert("Slide " + slideshow.currentSlide + " of " + slideshow.totalSlides );} );
 </script>
 </body>
 </html>

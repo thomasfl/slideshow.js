@@ -1,21 +1,30 @@
 /* Simple slideshow to scroll content of divs sideways
 * class based on http://www.switchonthecode.com/tutorials/jquery-creating-a-slideshow */
-window.Slideshow = (function (holderId, scrollerId, contentClass) {
+window.Slideshow = (function (params, complete) {
+
+    // var holderId = params.holderId;
+    // var scrollerId = params.scrollerId;
+    // var contentClass = params.contentClass;
+
 
     var s = {};
+    s.duration = params.duration;
+    if(s.duration === undefined){
+        s.duration = 500;
+    }
     s.totalSlides = 0;
     s.currentSlide = 1;
     s.contentSlides = "";
-    s.scrollerId = scrollerId;
+    s.scrollerId = params.scrollerId;
     s.totalWidth = 0;
-    s.contentSlides = $("." + contentClass);
+    s.contentSlides = $("." + params.contentClass);
     s.contentSlides.each(function(i){
         s.totalWidth += this.clientWidth;
         s.totalSlides++;
     });
 
-    $("#" + holderId).width(s.totalWidth);
-    $("#" + scrollerId).attr({scrollLeft: 0});
+    $("#" + params.holderId).width(s.totalWidth);
+    $("#" + s.scrollerId).attr({scrollLeft: 0});
 
     s.showPreviousSlide = function(){
       s.currentSlide--;
@@ -34,7 +43,7 @@ window.Slideshow = (function (holderId, scrollerId, contentClass) {
           scrollAmount += this.clientWidth;
         }
       });
-      $("#" + s.scrollerId).animate({scrollLeft: scrollAmount}, 500);
+        $("#" + s.scrollerId).animate({scrollLeft: scrollAmount}, s.duration, complete);
 
     };
 
